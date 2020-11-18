@@ -1,0 +1,34 @@
+@import 'variables';
+
+.snsIcons {
+  display: none;
+}
+
+.footer {
+  color: $text-color;
+  text-align: center;
+  // border: 1px solid red;
+  padding: 1rem 0;
+}
+
+@media (max-width: 1053px) {
+  .snsIcons {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    // border: 1px solid red;
+    padding: 0.5rem 0;
+  
+    a {
+      margin: 0 1rem;
+      color: $text-color;
+      transition: .3s;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+  .footer {
+    width: 100vw;
+  }
+}

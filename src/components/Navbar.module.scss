@@ -1,0 +1,123 @@
+@import 'variables';
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color;
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    img {
+      width: 130px;
+      margin-top: 2rem;
+      }
+    }
+  }
+
+.menulist {
+  list-style: none;
+
+  .closebtn {
+    display: none;
+  }
+
+  li {
+    margin-top: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+      transition: .3s;
+    }
+    a:hover {
+      color: $hover-color
+    }
+  }
+}
+
+.snsIcons {
+  margin: 3rem auto;
+  a {
+    color: $text-color;
+    margin: 3rem 1.2rem;
+    transition: .3s;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+.menuIcon {
+  display: none;
+}
+
+@media (max-width: 1053px) {
+  .navbar {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      width: 90px;
+      height: 90px;
+      margin-left: 1.5rem;
+      padding: 0;
+      img {
+        margin: 0;
+        padding: 0;
+        width: 90px;
+        }
+      }
+    .menulist {
+      // background-color: rgb(188, 143, 143);
+      background-color: $bg-color;
+      box-shadow: 0 0 8px $text-color;
+      width: 200px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 200;
+      // display: flex;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      // transform: translateX(208px);
+
+      .closebtn {
+        display: inline-block;
+        
+      }
+
+      li {
+        margin: 1.5rem;
+        &:first-of-type {
+          margin: 2rem;
+          align-self: flex-end;
+        }
+      }
+
+      a {
+        color: $text-color;
+        transition: .3s;
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+    .snsIcons {
+      display: none;
+    }
+    .menuIcon {
+      display: block;
+      margin-right: 2rem;
+    }
+  }
+}

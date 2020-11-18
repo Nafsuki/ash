@@ -1,0 +1,126 @@
+/* // Variables */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+.main {
+  width: calc(100% - 20vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .container .contents {
+  width: 90%;
+  height: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "work1 work2" "work1 work3";
+  grid-gap: 1rem;
+}
+
+.main .container .contents span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .container .contents span:hover {
+  color: #a0855b;
+}
+
+.main .container .contents .work1, .main .container .contents .work2, .main .container .contents .work3 {
+  color: #f1d6ab;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main .container .contents .work1::before, .main .container .contents .work2::before, .main .container .contents .work3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.main .container .contents .work1:hover::before, .main .container .contents .work2:hover::before, .main .container .contents .work3:hover::before {
+  color: #f1d6ab;
+  opacity: 1;
+}
+
+.main .container .contents .work1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: work1;
+  background-image: url(../css/img/pic2.jpg);
+}
+
+.main .container .contents .work2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: work2;
+  background-image: url(../css/img/pic1.jpg);
+}
+
+.main .container .contents .work3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: work3;
+  background-image: url(../css/img/pic3.jpg);
+}
+
+@media (max-width: 1053px) {
+  .main {
+    width: 100vw;
+    height: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main .container .contents {
+    overflow: auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.8fr 0.5fr 0.5fr;
+        grid-template-rows: 0.8fr 0.5fr 0.5fr;
+        grid-template-areas: "work1" "work2" "work3";
+  }
+}
+/*# sourceMappingURL=Main.module.css.map */

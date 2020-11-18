@@ -1,0 +1,40 @@
+/* // Variables */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+$text-color: #a0855b;
+$bg-color: #f9f6f2;
+$hover-color: #f1d6ab;
+$accent-color: #38470b;
+$font: 'Roboto', sans-serif;
+
+// General Settings
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $text-color;
+  height: 100vh;
+}
+
+.snsIcon:hover {
+  color: $hover-color;
+}
+
+
+/* Smartphones */
+
+// @media(max-width: 500px) {
+
+
+// }
+
+/* Tablets */
+
+// @media(max-width: 1024px) {
+  
+// }
+

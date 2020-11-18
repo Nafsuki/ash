@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+}
+
+@media (max-width: 1053px) {
+  .app {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+}
